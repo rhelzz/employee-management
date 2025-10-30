@@ -1,0 +1,245 @@
+<!-- 
+PANDUAN KUSTOMISASI WEBSITE EMPLOYEE MANAGEMENT PORTAL
+
+Website ini dirancang sebagai template statis yang dapat dengan mudah dikustomisasi
+sesuai kebutuhan perusahaan Anda. Berikut adalah panduan lengkap untuk melakukan
+kustomisasi.
+
+================================================
+1. MENGUBAH WARNA BRAND
+================================================
+
+Untuk mengubah warna hijau dan oranye ke warna brand perusahaan Anda:
+
+Cari dan ganti di semua file HTML:
+- Hijau Muda (#10b981) → Ganti dengan warna utama Anda
+- Hijau Light (#d1fae5) → Ganti dengan versi lighter dari warna utama
+- Oranye (#f97316) → Ganti dengan warna secondary Anda
+
+Contoh dalam Tailwind:
+- bg-green-500 → bg-[#warna-anda]
+- text-green-600 → text-[#warna-anda]
+- hover:text-green-700 → hover:text-[#warna-anda]
+
+================================================
+2. MENGUBAH LOGO DAN NAMA PERUSAHAAN
+================================================
+
+Logo di Navigation Bar:
+- Cari: <div class="w-10 h-10 bg-green-500 rounded-lg...">
+- Ubah warna atau ganti dengan <img> untuk logo kustom
+
+Nama Perusahaan:
+- Cari: "Employee Portal"
+- Ganti dengan nama portal/perusahaan Anda
+
+================================================
+3. MENAMBAH/MENGUBAH HALAMAN
+================================================
+
+Untuk menambah halaman baru:
+1. Buat file baru di folder pages/ (contoh: pages/talent.html)
+2. Copy struktur dari halaman existing (index.html atau welcome.html)
+3. Ubah konten sesuai kebutuhan
+4. Tambahkan link di navigation bar semua halaman
+
+Untuk mengubah konten halaman:
+- Edit teks, deskripsi, atau judul sesuai kebutuhan
+- Gambar placeholder dapat diganti dengan URL gambar real
+- Update link yang mengarah ke halaman lain
+
+================================================
+4. MENGUBAH INFORMASI KONTAK
+================================================
+
+Di semua file (terutama documents.html dan footer):
+- hr@company.com → Email HR Anda
+- support@company.com → Email IT Support Anda
+- finance@company.com → Email Finance Anda
+- +62 1234 567890 → Nomor telepon perusahaan Anda
+- +62 (0)21 1234 5678 → Nomor telepon HR Anda
+- Jakarta Pusat, Indonesia → Lokasi kantor Anda
+- www.company.com → Website perusahaan Anda
+
+================================================
+5. MENYESUAIKAN KONTEN PER HALAMAN
+================================================
+
+HOMEPAGE (index.html):
+- Ubah hero section text dan gambar
+- Edit description di feature cards
+- Ubah statistik di stats section
+- Update footer information
+
+WELCOME (welcome.html):
+- Sesuaikan daftar checklist onboarding
+- Edit link cepat di sidebar
+- Ubah informasi penting (durasi, kontak)
+
+DOCUMENTS (documents.html):
+- Update handbook links dan file
+- Edit daftar kebijakan
+- Sesuaikan form yang tersedia
+- Update kontak departemen
+
+TRAINING (training.html):
+- Edit nama dan deskripsi modul
+- Ubah durasi training
+- Update link training
+- Sesuaikan sumber daya pembelajaran
+
+FAQ (faq.html):
+- Edit Q&A sesuai kebutuhan perusahaan
+- Ubah jumlah FAQ per kategori
+- Update kontak support
+
+NEWS (news.html):
+- Ubah featured news
+- Update berita dan pengumuman
+- Edit link dan konten
+- Sesuaikan kategori
+
+FEEDBACK (feedback.html):
+- Update survei aktif
+- Edit daftar formulir feedback
+- Ubah hasil survei sebelumnya
+
+================================================
+6. MENAMBAH FITUR ATAU MODUL BARU
+================================================
+
+Struktur Card Yang Umum:
+
+<div class="card-hover bg-white rounded-lg shadow-md p-8 border-t-4 border-green-500">
+    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+        <i class="bi bi-icon-name text-green-600 text-3xl"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-4">Judul</h3>
+    <p class="text-gray-600 mb-6">Deskripsi</p>
+    <a href="#">Link →</a>
+</div>
+
+================================================
+7. MENGUBAH GAYA DAN STYLING
+================================================
+
+Tailwind CSS Utilities yang Sering Digunakan:
+
+Padding: p-4, p-6, p-8 (ukuran spacing)
+Margin: m-4, mb-4, mt-4 (untuk margin)
+Background: bg-white, bg-gray-50, bg-green-100
+Text: text-lg, text-xl, font-bold, text-gray-800
+Border: border, border-l-4, border-green-500
+Shadow: shadow-md, shadow-lg
+Border Radius: rounded-lg, rounded-full
+Display: flex, grid, block
+Hover: hover:bg-green-100, hover:text-green-700
+
+================================================
+8. MENAMBAH GAMBAR REAL
+================================================
+
+Mengganti Placeholder:
+- Cari: src="https://placehold.co/..."
+- Ganti dengan: src="path/ke/gambar-real.jpg"
+
+Atau upload ke folder:
+- website/assets/images/ (create folder baru)
+- Kemudian reference dengan: src="../assets/images/nama-file.jpg"
+
+Ukuran Gambar yang Direkomendasikan:
+- Hero image: 700x400px
+- Card images: 400x200px
+- Feature images: 500x300px
+
+================================================
+9. MENAMBAH LEBIH BANYAK KONTEN
+================================================
+
+Untuk setiap halaman, Anda dapat:
+- Menambah card baru dengan copy-paste struktur existing
+- Edit judul, deskripsi, dan link
+- Ubah warna border untuk variety (green/orange)
+- Sesuaikan icon dari Bootstrap Icons
+
+================================================
+10. BOOTSTRAP ICONS YANG TERSEDIA
+================================================
+
+Ikon yang sudah digunakan:
+- bi-briefcase (briefcase icon)
+- bi-book (book icon)
+- bi-question-circle (question icon)
+- bi-newspaper (news icon)
+- bi-chat-dots (chat icon)
+- bi-list (menu icon)
+- bi-arrow-right (arrow icon)
+- dan banyak lagi...
+
+Cari ikon lengkap di: https://icons.getbootstrap.com/
+
+Cara menggunakan:
+<i class="bi bi-icon-name"></i>
+
+================================================
+11. MEMBUAT RESPONSIVE LEBIH BAIK
+================================================
+
+Tambahkan di section untuk membuat responsive:
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- kolom otomatis atur berdasarkan ukuran layar -->
+</div>
+
+- grid-cols-1: 1 kolom untuk mobile
+- md:grid-cols-2: 2 kolom untuk tablet
+- lg:grid-cols-3: 3 kolom untuk desktop
+
+================================================
+12. MENGUBAH FONT DAN TEXT
+================================================
+
+Font Size:
+- text-lg, text-xl, text-2xl, text-3xl, text-4xl
+
+Font Weight:
+- font-medium, font-semibold, font-bold
+
+Line Height:
+- leading-relaxed, leading-tight
+
+Text Color:
+- text-gray-600, text-gray-800, text-white
+
+================================================
+TIPS TAMBAHAN
+================================================
+
+1. Selalu test di browser mobile juga
+2. Gunakan DevTools (F12) untuk test responsive
+3. Check semua link masih bekerja setelah perubahan
+4. Konsisten dengan warna dan styling
+5. Backup file original sebelum banyak perubahan
+6. Gunakan Find & Replace (Ctrl+H) untuk mass change
+
+================================================
+DUKUNGAN LEBIH LANJUT
+================================================
+
+Untuk dokumentasi Tailwind CSS lebih lengkap:
+https://tailwindcss.com/docs
+
+Untuk Bootstrap Icons:
+https://icons.getbootstrap.com/
+
+Untuk HTML Reference:
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+---
+
+Selamat menggunakan template Employee Management Portal!
+Semoga website ini membantu meningkatkan engagement karyawan Anda. 🚀
+-->
+
+PANDUAN_KUSTOMISASI.txt - Lihat file ini untuk informasi lebih lengkap tentang
+cara mengkustomisasi website sesuai kebutuhan perusahaan Anda.

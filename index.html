@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --color-primary: #10b981;
+            --color-primary-light: #d1fae5;
+            --color-secondary: #f97316;
+            --color-dark: #1f2937;
+            --color-light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            background-color: #10b981;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            min-height: 50px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #059669;
+            box-shadow: 0 8px 12px rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            background-color: #f97316;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(249, 115, 22, 0.3);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            min-height: 50px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #ea580c;
+            box-shadow: 0 8px 12px rgba(249, 115, 22, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
+            min-height: 50px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: #10b981;
+            box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .card-hover {
+            @apply transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer;
+        }
+        
+        .stat-card {
+            @apply p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-lg;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-md">
+                        <i class="bi bi-briefcase text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-gray-800 block">Employee Portal</span>
+                        <span class="text-xs text-green-600 font-semibold">HR Management System</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Links -->
+                <div class="hidden md:flex space-x-1">
+                    <a href="#" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-green-50 rounded-lg">Home</a>
+                    <a href="pages/welcome.html" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-green-50 rounded-lg">Welcome</a>
+                    <a href="pages/documents.html" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-green-50 rounded-lg">Dokumen</a>
+                    <a href="pages/training.html" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-orange-50 rounded-lg">Training</a>
+                    <a href="pages/faq.html" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-green-50 rounded-lg">FAQ</a>
+                    <a href="pages/news.html" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-orange-50 rounded-lg">Berita</a>
+                    <a href="pages/feedback.html" class="px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition hover:bg-green-50 rounded-lg">Feedback</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-green-500 p-2 hover:bg-gray-100 rounded-lg transition">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Enhanced -->
+    <section class="bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white py-24 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-green-400 bg-opacity-20 text-green-100 text-sm font-semibold rounded-full border border-green-300 mb-4">
+                            <i class="bi bi-star-fill mr-2"></i>Platform Terpercaya
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                        Kelola Karir Anda dengan Mudah
+                    </h1>
+                    <p class="text-lg text-green-100 leading-relaxed">
+                        Platform terintegrasi untuk pengembangan karyawan, akses dokumen, pelatihan interaktif, dan komunikasi tim yang lebih baik dalam satu tempat.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                        <a href="pages/welcome.html" class="btn-primary">
+                            <i class="bi bi-play-fill mr-2"></i>Mulai Sekarang
+                        </a>
+                        <a href="#features" class="btn-outline">
+                            <i class="bi bi-arrow-down mr-2"></i>Pelajari Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-orange-400 rounded-2xl filter blur-2xl opacity-30"></div>
+                    <img src="https://placehold.co/500x450/d1fae5/10b981?text=Employee+Portal" alt="Hero Image" class="rounded-2xl shadow-2xl relative z-10 transform hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Improved -->
+    <section id="features" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full mb-4">
+                    <i class="bi bi-lightning-charge-fill mr-2"></i>Fitur Unggulan
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Semua Kebutuhan Karyawan Dalam Satu Platform</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Kami menyediakan solusi lengkap untuk mendukung pertumbuhan karir dan kesuksesan Anda</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border-l-4 border-green-500 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6 group-hover:from-green-200 group-hover:to-green-300 transition">
+                        <i class="bi bi-book-fill text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dokumen & Kebijakan</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Akses lengkap handbook, kebijakan perusahaan, formulir penting, dan struktur organisasi kapan saja.</p>
+                    <a href="pages/documents.html" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold group transition">
+                        <span>Jelajahi Dokumen</span>
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border-l-4 border-orange-500 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-6 group-hover:from-orange-200 group-hover:to-orange-300 transition">
+                        <i class="bi bi-mortarboard-fill text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Pelatihan & E-Learning</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Tingkatkan keterampilan dengan 50+ modul pelatihan interaktif dan materi pembelajaran terkini.</p>
+                    <a href="pages/training.html" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold group transition">
+                        <span>Mulai Belajar</span>
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border-l-4 border-green-500 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6 group-hover:from-green-200 group-hover:to-green-300 transition">
+                        <i class="bi bi-question-circle-fill text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">FAQ & Knowledge Base</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Temukan jawaban cepat dengan ribuan artikel FAQ terorganisir dan tutorial lengkap departemen.</p>
+                    <a href="pages/faq.html" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold group transition">
+                        <span>Buka FAQ</span>
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border-l-4 border-orange-500 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-6 group-hover:from-orange-200 group-hover:to-orange-300 transition">
+                        <i class="bi bi-newspaper text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Berita & Pengumuman</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Tetap terupdate dengan berita terbaru, pengumuman penting, dan update perusahaan real-time.</p>
+                    <a href="pages/news.html" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold group transition">
+                        <span>Baca Berita</span>
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border-l-4 border-green-500 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6 group-hover:from-green-200 group-hover:to-green-300 transition">
+                        <i class="bi bi-chat-dots-fill text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Feedback & Survey</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Suara Anda penting. Bagikan feedback, ikuti survey, dan bantu kami meningkatkan perusahaan.</p>
+                    <a href="pages/feedback.html" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold group transition">
+                        <span>Berikan Feedback</span>
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border-l-4 border-orange-500 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl flex items-center justify-center mb-6 group-hover:from-orange-200 group-hover:to-orange-300 transition">
+                        <i class="bi bi-telephone-fill text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Kontak Penting</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Hubungi departemen HR, IT, Finance, dan support team lainnya dengan mudah dan cepat.</p>
+                    <a href="pages/documents.html#contact-hr" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold group transition">
+                        <span>Lihat Kontak</span>
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section - Enhanced -->
+    <section class="py-20 bg-gradient-to-r from-green-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-card">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="bi bi-people-fill text-green-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 font-medium mb-2">Karyawan Aktif</p>
+                            <p class="text-3xl font-bold text-green-600">1000+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="bi bi-book-fill text-orange-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 font-medium mb-2">Modul Pelatihan</p>
+                            <p class="text-3xl font-bold text-orange-600">50+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="bi bi-file-earmark-text text-green-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 font-medium mb-2">Dokumen</p>
+                            <p class="text-3xl font-bold text-green-600">100+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="bi bi-headset text-orange-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 font-medium mb-2">Support</p>
+                            <p class="text-3xl font-bold text-orange-600">24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full mb-4">
+                        <i class="bi bi-check-circle mr-2"></i>Keuntungan
+                    </span>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6 leading-tight">Mengapa Memilih Platform Kami?</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="bi bi-check-lg text-green-600 text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Akses Mudah & Cepat</h3>
+                                <p class="text-gray-600">Akses seluruh informasi perusahaan kapan saja, di mana saja, dari perangkat apa pun</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="bi bi-check-lg text-orange-600 text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Pengembangan Karir</h3>
+                                <p class="text-gray-600">Tingkatkan keterampilan dengan program pelatihan komprehensif dan bimbingan mentoring</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="bi bi-check-lg text-green-600 text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Komunikasi Terbuka</h3>
+                                <p class="text-gray-600">Bagikan feedback dan ide Anda langsung ke manajemen untuk perbaikan berkelanjutan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="bi bi-check-lg text-orange-600 text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Dukungan 24/7</h3>
+                                <p class="text-gray-600">Tim support kami siap membantu menjawab pertanyaan dan mengatasi masalah Anda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-orange-100 rounded-2xl filter blur-2xl opacity-40"></div>
+                    <img src="https://placehold.co/500x450/d1fae5/10b981?text=Team+Collaboration" alt="Benefits" class="rounded-2xl shadow-xl relative z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Enhanced -->
+    <section class="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-80 h-80 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-1 bg-green-500 bg-opacity-40 text-green-100 text-sm font-semibold rounded-full border border-green-300 mb-6">
+                <i class="bi bi-rocket-takeoff mr-2"></i>Siap Memulai?
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Bergabunglah dengan Ribuan Karyawan Kami</h2>
+            <p class="text-lg text-green-100 mb-10 max-w-2xl mx-auto">Tingkatkan pengalaman kerja Anda dan raih potensi penuh dengan platform HR terpadu kami</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pages/welcome.html" class="btn-primary">
+                    <i class="bi bi-play-fill mr-2"></i>Mulai Sekarang
+                </a>
+                <a href="pages/documents.html#contact-hr" class="btn-outline">
+                    <i class="bi bi-telephone mr-2"></i>Hubungi HR
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                            <i class="bi bi-briefcase text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Employee Portal</h4>
+                            <p class="text-xs text-gray-400">HR Management</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">Platform terpadu untuk pengembangan karir dan kesuksesan profesional karyawan</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                        <i class="bi bi-link-45deg text-green-500"></i>
+                        <span>Menu Utama</span>
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="pages/welcome.html" class="hover:text-green-400 transition">Welcome</a></li>
+                        <li><a href="pages/documents.html" class="hover:text-green-400 transition">Dokumen</a></li>
+                        <li><a href="pages/training.html" class="hover:text-green-400 transition">Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                        <i class="bi bi-collection text-orange-500"></i>
+                        <span>Konten</span>
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="pages/faq.html" class="hover:text-green-400 transition">FAQ</a></li>
+                        <li><a href="pages/news.html" class="hover:text-green-400 transition">Berita</a></li>
+                        <li><a href="pages/feedback.html" class="hover:text-green-400 transition">Feedback</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                        <i class="bi bi-envelope text-green-500"></i>
+                        <span>Hubungi Kami</span>
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center space-x-2 hover:text-green-400 transition">
+                            <i class="bi bi-envelope"></i>
+                            <span>hr@company.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2 hover:text-green-400 transition">
+                            <i class="bi bi-telephone"></i>
+                            <span>+62 (0)21 1234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-2 hover:text-green-400 transition">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Jakarta, Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>&copy; 2024 Employee Management Portal. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-green-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-400 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-green-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Knowledge Base - Employee Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="bi bi-briefcase text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Employee Portal</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-green-500 font-medium transition">Home</a>
+                    <a href="welcome.html" class="text-gray-700 hover:text-green-500 font-medium transition">Welcome</a>
+                    <a href="documents.html" class="text-gray-700 hover:text-green-500 font-medium transition">Dokumen</a>
+                    <a href="training.html" class="text-gray-700 hover:text-green-500 font-medium transition">Training</a>
+                    <a href="faq.html" class="text-green-600 font-medium border-b-2 border-green-600">FAQ</a>
+                    <a href="news.html" class="text-gray-700 hover:text-green-500 font-medium transition">Berita</a>
+                    <a href="feedback.html" class="text-gray-700 hover:text-green-500 font-medium transition">Feedback</a>
+                </div>
+                
+                <button class="md:hidden text-gray-700 hover:text-green-500">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-2">FAQ & Knowledge Base</h1>
+            <p class="text-green-50">Temukan jawaban cepat atas pertanyaan umum Anda</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Search Bar -->
+        <div class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="relative">
+                    <i class="bi bi-search absolute left-4 top-4 text-gray-400 text-xl"></i>
+                    <input type="text" placeholder="Cari pertanyaan atau topik..." class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200">
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+            <a href="#general" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition text-center border-t-4 border-green-500">
+                <i class="bi bi-info-circle text-green-600 text-3xl mb-2"></i>
+                <p class="font-semibold text-gray-800">Umum</p>
+                <p class="text-xs text-gray-600">12 Pertanyaan</p>
+            </a>
+
+            <a href="#hr" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition text-center border-t-4 border-orange-500">
+                <i class="bi bi-people-fill text-orange-600 text-3xl mb-2"></i>
+                <p class="font-semibold text-gray-800">HR & Gaji</p>
+                <p class="text-xs text-gray-600">15 Pertanyaan</p>
+            </a>
+
+            <a href="#it" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition text-center border-t-4 border-green-500">
+                <i class="bi bi-laptop text-green-600 text-3xl mb-2"></i>
+                <p class="font-semibold text-gray-800">IT & Teknologi</p>
+                <p class="text-xs text-gray-600">18 Pertanyaan</p>
+            </a>
+
+            <a href="#benefits" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition text-center border-t-4 border-orange-500">
+                <i class="bi bi-gift text-orange-600 text-3xl mb-2"></i>
+                <p class="font-semibold text-gray-800">Benefit & Asuransi</p>
+                <p class="text-xs text-gray-600">10 Pertanyaan</p>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main FAQ Content -->
+            <div class="lg:col-span-2">
+                <!-- General FAQ Section -->
+                <div id="general" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center space-x-2">
+                        <i class="bi bi-info-circle text-green-600"></i>
+                        <span>FAQ Umum</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Bagaimana cara mengakses portal ini?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Anda dapat mengakses portal karyawan kami kapan saja melalui browser web dengan menggunakan 
+                                    kredensial login yang telah diberikan oleh departemen IT. Pastikan Anda menggunakan koneksi internet 
+                                    yang aman dan browser yang up-to-date.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 2 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Berapa lama onboarding biasanya berlangsung?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Proses onboarding biasanya berlangsung selama 2-4 minggu tergantung pada posisi dan departemen Anda. 
+                                    Selama periode ini, Anda akan menyelesaikan berbagai pelatihan, paperwork, dan orientasi dengan tim.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 3 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Siapa yang dapat saya hubungi jika ada pertanyaan?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Anda dapat menghubungi departemen HR melalui email hr@company.com atau telepon +62 (0)21 1234 5678. 
+                                    Tim HR kami siap membantu Anda dengan pertanyaan apapun terkait onboarding dan kebijakan perusahaan.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- FAQ Item 4 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Apakah ada materi pelatihan yang harus saya selesaikan?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Ya, ada beberapa modul pelatihan wajib yang harus diselesaikan dalam minggu pertama kerja Anda, 
+                                    termasuk onboarding dasar, kebijakan perusahaan, keamanan, dan pelatihan khusus departemen. 
+                                    Anda dapat mengakses semua materi ini melalui portal E-Learning kami.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- HR FAQ Section -->
+                <div id="hr" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center space-x-2">
+                        <i class="bi bi-people-fill text-orange-600"></i>
+                        <span>FAQ HR & Gaji</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- HR FAQ 1 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-orange-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-orange-600"></i>
+                                    <span>Kapan saya menerima gaji pertama?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-orange-50">
+                                <p>
+                                    Gaji pertama Anda akan diterima pada akhir bulan pertama kerja Anda, asalkan semua dokumentasi 
+                                    payroll telah diselesaikan. Pastikan Anda memberikan informasi rekening bank yang benar kepada departemen HR.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- HR FAQ 2 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-orange-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-orange-600"></i>
+                                    <span>Berapa hari cuti yang saya dapatkan per tahun?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-orange-50">
+                                <p>
+                                    Setiap karyawan berhak mendapatkan 12 hari cuti tahunan, ditambah cuti bersama nasional dan hari libur 
+                                    pemerintah. Anda juga berhak mendapatkan cuti sakit tanpa batas dengan surat keterangan dokter.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- HR FAQ 3 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-orange-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-orange-600"></i>
+                                    <span>Bagaimana cara mengajukan cuti?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-orange-50">
+                                <p>
+                                    Anda dapat mengajukan cuti melalui formulir aplikasi cuti di halaman Dokumen & Kebijakan. 
+                                    Ajukan minimal 2 minggu sebelum tanggal cuti, dan pastikan untuk mendapatkan persetujuan dari manager Anda 
+                                    sebelum mengajukan ke departemen HR.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- HR FAQ 4 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-orange-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-orange-600"></i>
+                                    <span>Apakah ada bonus atau insentif?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-orange-50">
+                                <p>
+                                    Ya, perusahaan kami memberikan bonus kinerja setiap tahun berdasarkan evaluasi kinerja individual dan 
+                                    perusahaan. Detail lebih lanjut mengenai bonus dapat dilihat di kebijakan kompensasi atau hubungi HR.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- IT FAQ Section -->
+                <div id="it" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center space-x-2">
+                        <i class="bi bi-laptop text-green-600"></i>
+                        <span>FAQ IT & Teknologi</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- IT FAQ 1 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Bagaimana cara reset password?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Untuk mereset password, klik link "Lupa Password" di halaman login. Ikuti instruksi yang dikirim ke 
+                                    email Anda untuk membuat password baru. Jika Anda tidak menerima email, hubungi IT Support.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- IT FAQ 2 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Apa saja tools yang harus saya gunakan?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Tim Anda akan menggunakan Microsoft Teams untuk komunikasi, email, dan kolaborasi dokumen via SharePoint. 
+                                    IT Support akan membantu Anda setup akun dan menginstal aplikasi yang diperlukan.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- IT FAQ 3 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-green-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-green-600"></i>
+                                    <span>Bagaimana cara menghubungi IT Support?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-green-50">
+                                <p>
+                                    Hubungi IT Support melalui email support@company.com atau telepon +62 (0)21 1234 5679. 
+                                    Tim IT kami siap membantu dengan masalah teknis 24/7.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Benefits FAQ Section -->
+                <div id="benefits" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center space-x-2">
+                        <i class="bi bi-gift text-orange-600"></i>
+                        <span>FAQ Benefit & Asuransi</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Benefit FAQ 1 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-orange-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-orange-600"></i>
+                                    <span>Asuransi apa yang ditanggung perusahaan?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-orange-50">
+                                <p>
+                                    Perusahaan menyediakan asuransi kesehatan (termasuk keluarga), asuransi jiwa, dan program kesejahteraan karyawan. 
+                                    Detail lengkap tersedia di kebijakan benefit atau hubungi HR.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- Benefit FAQ 2 -->
+                        <details class="bg-white rounded-lg shadow-md cursor-pointer group">
+                            <summary class="p-6 flex items-center justify-between font-semibold text-gray-800 hover:bg-orange-50">
+                                <span class="flex items-center space-x-3">
+                                    <i class="bi bi-question-circle text-orange-600"></i>
+                                    <span>Bagaimana cara mengklaim asuransi kesehatan?</span>
+                                </span>
+                                <i class="bi bi-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+                            <div class="px-6 pb-6 text-gray-700 bg-orange-50">
+                                <p>
+                                    Anda dapat menggunakan kartu asuransi kesehatan di rumah sakit atau klinik yang bekerja sama. 
+                                    Untuk klaim, kumpulkan dokumen yang diperlukan dan ajukan ke departemen HR atau portal asuransi online.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Quick Help -->
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-24 mb-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center space-x-2">
+                        <i class="bi bi-headset text-orange-600"></i>
+                        <span>Butuh Bantuan?</span>
+                    </h4>
+                    <p class="text-gray-700 text-sm mb-6">
+                        Jika pertanyaan Anda tidak terjawab di sini, hubungi tim kami.
+                    </p>
+                    <div class="space-y-3">
+                        <a href="mailto:hr@company.com" class="block w-full p-3 bg-green-50 hover:bg-green-100 rounded-lg transition text-center font-semibold text-green-700">
+                            Email HR
+                        </a>
+                        <a href="feedback.html" class="block w-full p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition text-center font-semibold text-orange-700">
+                            Hubungi Support
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular Topics -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">Topik Populer</h4>
+                    <div class="space-y-2">
+                        <a href="#hr" class="block p-2 hover:bg-gray-100 rounded transition text-gray-700 flex items-center space-x-2">
+                            <i class="bi bi-tag-fill text-orange-600 text-sm"></i>
+                            <span class="text-sm">Gaji & Kompensasi</span>
+                        </a>
+                        <a href="#general" class="block p-2 hover:bg-gray-100 rounded transition text-gray-700 flex items-center space-x-2">
+                            <i class="bi bi-tag-fill text-green-600 text-sm"></i>
+                            <span class="text-sm">Akses Portal</span>
+                        </a>
+                        <a href="#benefits" class="block p-2 hover:bg-gray-100 rounded transition text-gray-700 flex items-center space-x-2">
+                            <i class="bi bi-tag-fill text-orange-600 text-sm"></i>
+                            <span class="text-sm">Asuransi & Benefit</span>
+                        </a>
+                        <a href="#it" class="block p-2 hover:bg-gray-100 rounded transition text-gray-700 flex items-center space-x-2">
+                            <i class="bi bi-tag-fill text-green-600 text-sm"></i>
+                            <span class="text-sm">Tools & Teknologi</span>
+                        </a>
+                        <a href="#hr" class="block p-2 hover:bg-gray-100 rounded transition text-gray-700 flex items-center space-x-2">
+                            <i class="bi bi-tag-fill text-orange-600 text-sm"></i>
+                            <span class="text-sm">Cuti & Izin</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Employee Portal</span>
+                    </h4>
+                    <p class="text-gray-400 text-sm">Platform terpadu untuk pengembangan karir karyawan.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Menu Utama</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="welcome.html" class="hover:text-green-400 transition">Welcome</a></li>
+                        <li><a href="documents.html" class="hover:text-green-400 transition">Dokumen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Konten</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="training.html" class="hover:text-green-400 transition">Training</a></li>
+                        <li><a href="faq.html" class="hover:text-green-400 transition">FAQ</a></li>
+                        <li><a href="news.html" class="hover:text-green-400 transition">Berita</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="bi bi-envelope"></i>
+                            <span>hr@company.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="bi bi-telephone"></i>
+                            <span>+62 1234 567890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Employee Management Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

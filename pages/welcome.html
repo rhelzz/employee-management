@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Employee Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="bi bi-briefcase text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Employee Portal</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-green-500 font-medium transition">Home</a>
+                    <a href="welcome.html" class="text-green-600 font-medium border-b-2 border-green-600">Welcome</a>
+                    <a href="documents.html" class="text-gray-700 hover:text-green-500 font-medium transition">Dokumen</a>
+                    <a href="training.html" class="text-gray-700 hover:text-green-500 font-medium transition">Training</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-green-500 font-medium transition">FAQ</a>
+                    <a href="news.html" class="text-gray-700 hover:text-green-500 font-medium transition">Berita</a>
+                    <a href="feedback.html" class="text-gray-700 hover:text-green-500 font-medium transition">Feedback</a>
+                </div>
+                
+                <button class="md:hidden text-gray-700 hover:text-green-500">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-2">Selamat Datang di Portal Karyawan</h1>
+            <p class="text-green-50">Panduan memulai untuk karyawan baru</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Introduction Card -->
+                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i class="bi bi-hand-thumbs-up text-green-600 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-800">Halo, Karyawan Baru!</h2>
+                            <p class="text-gray-600">Kami senang memiliki Anda sebagai bagian dari tim kami</p>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/700x300/d1fae5/10b981?text=Welcome+to+Our+Team" alt="Welcome" class="w-full rounded-lg mb-6">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Portal Karyawan kami dirancang untuk memudahkan Anda mengakses informasi penting, 
+                        mengembangkan keterampilan, dan berkolaborasi dengan tim. Dalam beberapa hari pertama, 
+                        ikuti panduan di bawah ini untuk memastikan Anda siap memulai.
+                    </p>
+                </div>
+
+                <!-- Onboarding Checklist -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center space-x-3">
+                        <i class="bi bi-clipboard-check text-green-600 text-2xl"></i>
+                        <span>Checklist Onboarding</span>
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Item 1 -->
+                        <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="bi bi-check-circle-fill text-green-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800">Baca Handbook Perusahaan</h4>
+                                <p class="text-gray-600 text-sm mt-1">Pelajari visi, misi, dan nilai-nilai perusahaan kami</p>
+                                <a href="documents.html#handbook" class="text-green-600 hover:text-green-700 text-sm font-semibold mt-2 inline-flex items-center space-x-1">
+                                    <span>Buka Handbook</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="bi bi-check-circle-fill text-green-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800">Lengkapi Data Pribadi</h4>
+                                <p class="text-gray-600 text-sm mt-1">Pastikan semua data pribadi dan kontak Anda tercatat dengan benar</p>
+                                <a href="documents.html#forms" class="text-green-600 hover:text-green-700 text-sm font-semibold mt-2 inline-flex items-center space-x-1">
+                                    <span>Lihat Form</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex items-start p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="bi bi-check-circle-fill text-orange-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800">Ikuti Pelatihan Dasar</h4>
+                                <p class="text-gray-600 text-sm mt-1">Selesaikan modul pelatihan onboarding yang telah disiapkan</p>
+                                <a href="training.html" class="text-orange-600 hover:text-orange-700 text-sm font-semibold mt-2 inline-flex items-center space-x-1">
+                                    <span>Mulai Pelatihan</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="bi bi-check-circle-fill text-green-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800">Kenali Struktur Organisasi</h4>
+                                <p class="text-gray-600 text-sm mt-1">Ketahui struktur organisasi dan tim yang akan Anda kerjasama</p>
+                                <a href="documents.html#organization" class="text-green-600 hover:text-green-700 text-sm font-semibold mt-2 inline-flex items-center space-x-1">
+                                    <span>Lihat Struktur</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="bi bi-check-circle-fill text-green-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800">Buat Akun Teams & Tools</h4>
+                                <p class="text-gray-600 text-sm mt-1">Setup akun Microsoft Teams dan tools kolaborasi lainnya</p>
+                                <a href="documents.html#contact-it" class="text-green-600 hover:text-green-700 text-sm font-semibold mt-2 inline-flex items-center space-x-1">
+                                    <span>Hubungi IT Support</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="flex items-start p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="bi bi-check-circle-fill text-orange-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800">Atur One-on-One dengan Manager</h4>
+                                <p class="text-gray-600 text-sm mt-1">Jadwalkan pertemuan pertama dengan manajer Anda untuk diskusi role dan ekspektasi</p>
+                                <a href="documents.html#contact-hr" class="text-orange-600 hover:text-orange-700 text-sm font-semibold mt-2 inline-flex items-center space-x-1">
+                                    <span>Hubungi HR</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Quick Links Card -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 sticky top-24">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center space-x-2">
+                        <i class="bi bi-lightning-fill text-orange-500"></i>
+                        <span>Link Cepat</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <a href="documents.html" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition">
+                            <p class="font-semibold text-gray-800 flex items-center space-x-2">
+                                <i class="bi bi-file-earmark"></i>
+                                <span>Dokumen</span>
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Akses semua dokumen penting</p>
+                        </a>
+                        
+                        <a href="training.html" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition">
+                            <p class="font-semibold text-gray-800 flex items-center space-x-2">
+                                <i class="bi bi-book"></i>
+                                <span>Training</span>
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Mulai pelatihan onboarding</p>
+                        </a>
+                        
+                        <a href="faq.html" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition">
+                            <p class="font-semibold text-gray-800 flex items-center space-x-2">
+                                <i class="bi bi-question-circle"></i>
+                                <span>FAQ</span>
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Tanya jawab umum</p>
+                        </a>
+                        
+                        <a href="feedback.html" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition">
+                            <p class="font-semibold text-gray-800 flex items-center space-x-2">
+                                <i class="bi bi-chat-dots"></i>
+                                <span>Feedback</span>
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Berikan masukan Anda</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Important Info Card -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg shadow-md p-6 border-l-4 border-green-600">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center space-x-2">
+                        <i class="bi bi-info-circle-fill text-green-600"></i>
+                        <span>Info Penting</span>
+                    </h4>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <p class="font-semibold text-gray-800">Durasi Onboarding</p>
+                            <p class="text-gray-700">Rata-rata 2-4 minggu</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Hubungi HR</p>
+                            <p class="text-gray-700">hr@company.com</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">IT Support</p>
+                            <p class="text-gray-700">support@company.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Employee Portal</span>
+                    </h4>
+                    <p class="text-gray-400 text-sm">Platform terpadu untuk pengembangan karir karyawan.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Menu Utama</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="welcome.html" class="hover:text-green-400 transition">Welcome</a></li>
+                        <li><a href="documents.html" class="hover:text-green-400 transition">Dokumen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Konten</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="training.html" class="hover:text-green-400 transition">Training</a></li>
+                        <li><a href="faq.html" class="hover:text-green-400 transition">FAQ</a></li>
+                        <li><a href="news.html" class="hover:text-green-400 transition">Berita</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="bi bi-envelope"></i>
+                            <span>hr@company.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="bi bi-telephone"></i>
+                            <span>+62 1234 567890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Employee Management Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & E-Learning - Employee Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="bi bi-briefcase text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Employee Portal</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-green-500 font-medium transition">Home</a>
+                    <a href="welcome.html" class="text-gray-700 hover:text-green-500 font-medium transition">Welcome</a>
+                    <a href="documents.html" class="text-gray-700 hover:text-green-500 font-medium transition">Dokumen</a>
+                    <a href="training.html" class="text-green-600 font-medium border-b-2 border-green-600">Training</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-green-500 font-medium transition">FAQ</a>
+                    <a href="news.html" class="text-gray-700 hover:text-green-500 font-medium transition">Berita</a>
+                    <a href="feedback.html" class="text-gray-700 hover:text-green-500 font-medium transition">Feedback</a>
+                </div>
+                
+                <button class="md:hidden text-gray-700 hover:text-green-500">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-2">Pelatihan & E-Learning</h1>
+            <p class="text-orange-50">Kembangkan keterampilan Anda dengan modul pelatihan interaktif</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Featured Training -->
+        <div class="bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg shadow-md p-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Onboarding Mandiri</h2>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Mulai petualangan pembelajaran Anda dengan modul onboarding komprehensif kami. 
+                        Pelajari dasar-dasar perusahaan, sistem, dan proses yang perlu Anda ketahui.
+                    </p>
+                    <a href="#" class="inline-flex items-center space-x-2 px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition font-semibold">
+                        <i class="bi bi-play-fill"></i>
+                        <span>Mulai Pelatihan</span>
+                    </a>
+                </div>
+                <img src="https://placehold.co/400x300/fef3c7/f97316?text=Onboarding+Training" alt="Onboarding" class="rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <!-- Training Modules Section -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center space-x-3">
+                <i class="bi bi-book-fill text-orange-600"></i>
+                <span>Modul Pelatihan</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Module 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/d1fae5/10b981?text=Company+Culture" alt="Module" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full font-semibold">Beginner</span>
+                            <span class="text-xs text-gray-600">4 Jam</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Budaya Perusahaan</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Pelajari nilai-nilai inti, misi, dan visi perusahaan yang mengarahkan setiap keputusan kami.
+                        </p>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold text-sm inline-flex items-center space-x-1">
+                            <span>Buka Kursus</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/fef3c7/f97316?text=Leadership+Skills" alt="Module" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-semibold">Intermediate</span>
+                            <span class="text-xs text-gray-600">6 Jam</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kepemimpinan Efektif</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Kembangkan keterampilan kepemimpinan yang diperlukan untuk memimpin tim dengan percaya diri.
+                        </p>
+                        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold text-sm inline-flex items-center space-x-1">
+                            <span>Buka Kursus</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/d1fae5/10b981?text=Communication+Skills" alt="Module" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full font-semibold">Beginner</span>
+                            <span class="text-xs text-gray-600">5 Jam</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Keterampilan Komunikasi</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Tingkatkan kemampuan komunikasi verbal dan tertulis untuk kolaborasi yang lebih baik.
+                        </p>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold text-sm inline-flex items-center space-x-1">
+                            <span>Buka Kursus</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/fef3c7/f97316?text=Technical+Skills" alt="Module" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-semibold">Advanced</span>
+                            <span class="text-xs text-gray-600">8 Jam</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Keterampilan Teknis</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Pelajari tools dan teknologi terbaru yang digunakan dalam industri dan perusahaan kami.
+                        </p>
+                        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold text-sm inline-flex items-center space-x-1">
+                            <span>Buka Kursus</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/d1fae5/10b981?text=Time+Management" alt="Module" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full font-semibold">Beginner</span>
+                            <span class="text-xs text-gray-600">3 Jam</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Manajemen Waktu</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Optimalkan produktivitas dengan teknik manajemen waktu yang terbukti efektif.
+                        </p>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold text-sm inline-flex items-center space-x-1">
+                            <span>Buka Kursus</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/fef3c7/f97316?text=Professional+Development" alt="Module" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-semibold">Intermediate</span>
+                            <span class="text-xs text-gray-600">7 Jam</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pengembangan Profesional</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Rencanakan karir Anda dan capai tujuan profesional dengan mentoring dan bimbingan.
+                        </p>
+                        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold text-sm inline-flex items-center space-x-1">
+                            <span>Buka Kursus</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialized Training Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center space-x-3">
+                <i class="bi bi-star-fill text-orange-600"></i>
+                <span>Pelatihan Khusus</span>
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Specialized 1 -->
+                <div class="p-4 border-l-4 border-orange-500 bg-orange-50 rounded-r-lg">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-2">
+                                <i class="bi bi-microsoft-teams text-blue-600"></i>
+                                <span>Teams & Collaboration Tools</span>
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Panduan lengkap menggunakan Microsoft Teams dan tools kolaborasi lainnya untuk komunikasi efektif.
+                            </p>
+                            <a href="#" class="text-orange-600 hover:text-orange-700 text-sm font-semibold inline-flex items-center space-x-1">
+                                <span>Lihat Pelatihan</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <span class="text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-semibold whitespace-nowrap ml-4">
+                            2 Jam
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Specialized 2 -->
+                <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-r-lg">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-2">
+                                <i class="bi bi-lock-fill text-red-600"></i>
+                                <span>Keamanan Data & Privacy</span>
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Pelajari praktik terbaik keamanan data dan privasi untuk melindungi informasi perusahaan.
+                            </p>
+                            <a href="#" class="text-green-600 hover:text-green-700 text-sm font-semibold inline-flex items-center space-x-1">
+                                <span>Lihat Pelatihan</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <span class="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold whitespace-nowrap ml-4">
+                            3 Jam
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Specialized 3 -->
+                <div class="p-4 border-l-4 border-orange-500 bg-orange-50 rounded-r-lg">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-2">
+                                <i class="bi bi-people-fill text-purple-600"></i>
+                                <span>Diversity & Inclusion</span>
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Memahami pentingnya keberagaman dan inklusi dalam lingkungan kerja modern.
+                            </p>
+                            <a href="#" class="text-orange-600 hover:text-orange-700 text-sm font-semibold inline-flex items-center space-x-1">
+                                <span>Lihat Pelatihan</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <span class="text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-semibold whitespace-nowrap ml-4">
+                            1.5 Jam
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Specialized 4 -->
+                <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-r-lg">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-2">
+                                <i class="bi bi-heart-pulse text-pink-600"></i>
+                                <span>Wellness & Work-Life Balance</span>
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Jaga kesehatan mental dan fisik dengan tips wellness dan keseimbangan kerja-hidup.
+                            </p>
+                            <a href="#" class="text-green-600 hover:text-green-700 text-sm font-semibold inline-flex items-center space-x-1">
+                                <span>Lihat Pelatihan</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                        <span class="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-semibold whitespace-nowrap ml-4">
+                            2.5 Jam
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Resources -->
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center space-x-3">
+                <i class="bi bi-library text-green-600"></i>
+                <span>Sumber Daya Pembelajaran</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Resource 1 -->
+                <div class="p-6 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-3">
+                        <i class="bi bi-file-earmark-pdf text-red-600 text-2xl"></i>
+                        <span>E-Books & Panduan</span>
+                    </h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Download e-books dan panduan lengkap untuk pembelajaran mandiri.
+                    </p>
+                    <a href="#" class="text-green-600 hover:text-green-700 font-semibold text-sm">
+                        Akses Library →
+                    </a>
+                </div>
+
+                <!-- Resource 2 -->
+                <div class="p-6 bg-orange-50 rounded-lg border border-orange-200">
+                    <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-3">
+                        <i class="bi bi-play-circle text-blue-600 text-2xl"></i>
+                        <span>Video Tutorial</span>
+                    </h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Pelajari dari video tutorial yang mudah dipahami dan interaktif.
+                    </p>
+                    <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                        Tonton Video →
+                    </a>
+                </div>
+
+                <!-- Resource 3 -->
+                <div class="p-6 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-3">
+                        <i class="bi bi-headphones text-purple-600 text-2xl"></i>
+                        <span>Podcast & Webinar</span>
+                    </h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Ikuti podcast dan webinar interaktif dengan para ahli industri.
+                    </p>
+                    <a href="#" class="text-green-600 hover:text-green-700 font-semibold text-sm">
+                        Dengarkan Sekarang →
+                    </a>
+                </div>
+
+                <!-- Resource 4 -->
+                <div class="p-6 bg-orange-50 rounded-lg border border-orange-200">
+                    <h3 class="font-bold text-gray-800 flex items-center space-x-2 mb-3">
+                        <i class="bi bi-chat-dots text-cyan-600 text-2xl"></i>
+                        <span>Komunitas Belajar</span>
+                    </h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Bergabunglah dengan komunitas karyawan untuk berbagi ilmu dan pengalaman.
+                    </p>
+                    <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold text-sm">
+                        Bergabung Sekarang →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4 flex items-center space-x-2">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Employee Portal</span>
+                    </h4>
+                    <p class="text-gray-400 text-sm">Platform terpadu untuk pengembangan karir karyawan.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Menu Utama</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="welcome.html" class="hover:text-green-400 transition">Welcome</a></li>
+                        <li><a href="documents.html" class="hover:text-green-400 transition">Dokumen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Konten</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="training.html" class="hover:text-green-400 transition">Training</a></li>
+                        <li><a href="faq.html" class="hover:text-green-400 transition">FAQ</a></li>
+                        <li><a href="news.html" class="hover:text-green-400 transition">Berita</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="bi bi-envelope"></i>
+                            <span>hr@company.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="bi bi-telephone"></i>
+                            <span>+62 1234 567890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Employee Management Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
